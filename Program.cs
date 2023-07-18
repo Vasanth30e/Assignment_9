@@ -45,7 +45,7 @@ namespace Assignment_9
                     {
                         throw new ValidException("Password atleast have 8 characters");
                     }
-                    else if(!email.Contains("@"))
+                    else if(!email.Contains("@"))   //Executes if the user entered the email without "@" symbol
                     {
                         Console.WriteLine("Email must contain \"@\" ");
                     }
