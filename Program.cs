@@ -67,18 +67,22 @@ namespace Assignment_9
                     Console.WriteLine("Error!!!" + ex.Message);
                 }
                 finally
-                {
-                    Console.WriteLine("\nProgram Ended");
+                {                   
                     Console.WriteLine($"\nDo you wish to conitnue if yes press 'y' or press any other key");
                     choice = char.Parse(Console.ReadLine());
-                    Console.ReadKey();
+                    if(choice == 'y')
+                    {
+                        Console.WriteLine("\n---Program Continues---\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("User Ended the Program!!!");
+                    }                   
+                    
                 }
                 
             } while (choice == 'y');
-            
-
-            
-
+            Console.ReadKey();
         }
     }
 }
