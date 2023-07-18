@@ -34,6 +34,8 @@ namespace Assignment_9
                     int minLength = 6;
                     
                     int passwordLength = 8;
+
+                    
                     
                     if (minLength > userName.Length)  //Only executes if the user enter less than 6 (ex. 6 > 5)
                     {
@@ -42,6 +44,10 @@ namespace Assignment_9
                     else if (passwordLength > password.Length)   //Only Executes if the user enter less than 8 characters (ex. 8 > 7)
                     {
                         throw new ValidException("Password atleast have 8 characters");
+                    }
+                    else if(!email.Contains("@"))
+                    {
+                        Console.WriteLine("Email must contain \"@\" ");
                     }
                     else  //If user enters the correct length for both user name and password then this will execute
                     {
